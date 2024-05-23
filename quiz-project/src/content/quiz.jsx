@@ -1,4 +1,3 @@
-/* eslint-disable no-case-declarations */
 import { createContext, useReducer } from "react";
 import questions from '../data/questions'
 
