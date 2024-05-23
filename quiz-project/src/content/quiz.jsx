@@ -43,13 +43,14 @@ const quizReducer = (state, action) => {
                 ...state,
                 currentQuestion: nexQuestion,
                 gameStage: endGame ? STAGES[2] : state.gameStage,
+                answerSelected: false,
             }
 
         case 'NEW_GAME':
             return initialState
 
         case 'CHECK_ANSWER':
-            // if (state.answerSelected) return state
+            if (state.answerSelected) return state
 
             const answer = action.payload.answer
             const option = action.payload.option
